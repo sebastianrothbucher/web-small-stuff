@@ -1,6 +1,6 @@
 // create a jittery backend that is sometimes fast and sometimes slow
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
 

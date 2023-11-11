@@ -40,7 +40,7 @@ function __instrumentPromise(legacyThis, legacyFct, legacyFctName) {
 window.__waitForFetch = async function() {
     await __waitForFetchPromise;
 };
-window.__hasOngoingFetch = function() {
+window.__hasNoOngoingFetch = function() {
     return __openFetchPromises === 0;
 };
 
