@@ -1,0 +1,13 @@
+{
+  "name": "override-fetch",
+  "scripts": {
+    "frontend": "http-server -p 8080 -c 0 frontend/",
+    "backend": "node backend/backend.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-server": "^14.1.1"
+  }
+}

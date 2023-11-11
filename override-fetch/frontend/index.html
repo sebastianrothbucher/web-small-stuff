@@ -1,0 +1,17 @@
+<html>
+<body>
+    <div><button id="bt">Run action</button> <span id="spn1"></span> <span id="spn2"></span></div>
+    <script>
+        document.getElementById('bt').addEventListener('click', async () => {
+            console.log('Starting action one');
+            const serverRes1 = await fetch('http://localhost:8090/test?action=one').then(res => res.json());
+            document.getElementById('spn1').innerText = serverRes1.content;
+            console.log('Starting action two');
+            const serverRes2 = await fetch('http://localhost:8090/test?action=two').then(res => res.json());
+            document.getElementById('spn2').innerText = serverRes2.content;
+            console.log('Done with actions');
+        });
+    </script>
+    <script src="fetch-override.js"></script><!-- TODO: only insert during tests - like in build -->
+</body>
+</html>
